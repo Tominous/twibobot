@@ -83,12 +83,12 @@ def mainLoop():
 		if(tbot.readyForMore() == True):
 			if(fd.checkFeed() == True):
 				articles = fd.getFeeds()
-				#print "got %s articles" % (len(articles))
+				print "got %s articles" % (len(articles))
 				for article in articles.keys():
 					tbot.queueStatus(article, articles[article])
 		else:
 			tbot.postStatus()
-			#time.sleep(1)
+			time.sleep(1)
 		time.sleep(0.2)
 		
 		
